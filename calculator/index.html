@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator" id="calculator">
+    
+    <div class="display" id="display">
+            <input type="text" id="display-input" > 
+    </div>
+    <div class="buttons">
+        <button class="btn btn-option" id="btn-option">&#9881;</button>
+        <button class="btn btn-clear" id="btn-clear" onclick="
+            currentInput = '';
+            document.querySelector('#display-input').value = currentInput;
+        ">C</button>
+        <button class="btn btn-operator" id="btn-divide" onclick="
+            currentInput += '/';
+            document.querySelector('#display-input').value = currentInput;
+        ">/</button>
+        <button class="btn btn-operator" id="btn-multiply" onclick="
+            currentInput += '*';
+            document.querySelector('#display-input').value = currentInput;
+        ">*</button>
+
+        <button class="btn btn-digit" id="btn-7" onclick="
+            currentInput += '7';
+            document.querySelector('#display-input').value = currentInput;
+        ">7</button>
+        <button class="btn btn-digit" id="btn-8" onclick="
+            currentInput += '8';
+            document.querySelector('#display-input').value = currentInput;
+        ">8</button>
+        <button class="btn btn-digit" id="btn-9" onclick="
+            currentInput += '9';
+            document.querySelector('#display-input').value = currentInput;
+        ">9</button>
+        <button class="btn btn-operator" id="btn-subtract" onclick="
+            currentInput += '-';
+            document.querySelector('#display-input').value = currentInput;
+        ">-</button>
+
+        <button class="btn btn-digit" id="btn-4" onclick="
+            currentInput += '4';
+            document.querySelector('#display-input').value = currentInput;
+        ">4</button>
+        <button class="btn btn-digit" id="btn-5" onclick="
+            currentInput += '5';
+            document.querySelector('#display-input').value = currentInput;
+        ">5</nutton>
+        <button class="btn btn-digit" id="btn-6" onclick="
+            currentInput += '6';
+            document.querySelector('#display-input').value = currentInput;
+        ">6</button>
+        <button class="btn btn-operator" id="btn-add" onclick="
+            currentInput += '+';
+            document.querySelector('#display-input').value = currentInput;
+        ">+</button>
+
+        <button class="btn btn-digit" id="btn-1" onclick="
+            currentInput += '1';
+            document.querySelector('#display-input').value = currentInput;
+        ">1</button>
+        <button class="btn btn-digit" id="btn-2" onclick="
+            currentInput += '2';
+            document.querySelector('#display-input').value = currentInput;
+        ">2</button>
+        <button class="btn btn-digit" id="btn-3" onclick="
+            currentInput += '3';
+            document.querySelector('#display-input').value = currentInput;
+        ">3</button>
+        <button class="btn btn-equal" id="btn-equal" onclick="
+            let result=eval(currentInput);
+            currentInput = result;
+            document.querySelector('#display-input').value = currentInput;
+        ">=</button>
+
+        <button class="btn btn-digit btn-zero" id="btn-0">0</button>
+        <button class="btn btn-digit" id="btn-dot">.</button>
+    </div>
+</div>
+
+<script>
+    let currentInput = '';
+    document.querySelector('#display-input').value = currentInput;
+    
+</script>
+
+</body>
+</html>
